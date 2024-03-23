@@ -1,0 +1,243 @@
+body {
+	background-image: url(bg1.jpg);
+	background-position-y: 20px;
+	background-position-x: -200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 97vh;
+	flex-direction: column;
+	background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(1px); 
+    z-index: -1;
+}
+
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form {
+	width: 400px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(20px);
+	transform: translateX(-250px);
+	border: 2px solid rgba(238, 34, 7, 0.932);
+    border-radius: 20px;
+	overflow: hidden;
+}
+
+form::before {
+	content: '';
+    position: absolute;
+    top: -20%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #ff3c00, #ff3c00, #ff3c00);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+h2 {
+	text-align: center;
+    margin-top: -15px;
+	margin-bottom: 5px;
+	font-size: 1.9rem;
+	color: rgb(236, 229, 229);
+}
+
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 5px auto;
+	border-radius: 5px;
+}
+
+input:hover{
+	border: 2px solid rgba(250, 37, 0, 0.932);
+    box-shadow: 
+        0 0 10px #ff3c00,
+        0 0 20px #ff3c00,
+        0 0 40px #ff3c00,
+        0 0 80px #ff3c00,
+        0 0 160px #ff3c00;
+}
+
+.password-container {
+	position: relative;
+}
+
+.password-input {
+	padding-right: 30px;
+}
+
+.toggle-password {
+	position: absolute;
+	right: 50px;
+	transform: translateY(-160%);
+	cursor: pointer;
+}
+.toggle-confirm-password{
+    position: absolute;
+	right: 50px;
+	transform: translateY(-160%);
+	cursor: pointer;
+}
+
+label {
+	color: white;
+	font-size: 15px;
+	padding: 10px;
+}
+
+button {
+	transform: translateX(15px);
+	background: transparent;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 30px;
+	margin-right: 10px;
+	border: none;
+	height: 40px;
+	width: 300px;
+	font-size: 15px;
+	margin-top: 1rem;
+}
+button:hover{
+	border: 2px solid rgba(250, 37, 0, 0.932);
+	text-shadow: 0 0 5px #ff3c00;
+	color: #ccc;
+    box-shadow: 
+        0 0 10px #ff3c00,
+        0 0 20px #ff3c00,
+        0 0 40px #ff3c00,
+        0 0 80px #ff3c00,
+        0 0 160px #ff3c00;
+}
+
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+.signUp-link{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.signUp-link p a{
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+}
+.signUp-link p a:hover{
+    border: 2px solid rgba(250, 37, 0, 0.932);
+    color: white;
+    text-shadow: 0 0 5px #ff3c00;
+    box-shadow: 
+        0 0 10px #ff3c00,
+        0 0 20px #ff3c00,
+        0 0 40px #ff3c00,
+        0 0 80px #ff3c00,
+        0 0 160px #ff3c00;
+}
+
+#signUpBtn{
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.signIn-link{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+   
+}
+.signIn-link p a{
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1em;
+}
+.signIn-link p a:hover{
+    text-decoration: underline;
+    color: white;
+    text-shadow: 0 0 5px #ff3c00;
+    box-shadow: 
+        0 0 10px #ff3c00,
+        0 0 20px #ff3c00,
+        0 0 40px #ff3c00,
+        0 0 80px #ff3c00,
+        0 0 160px #ff3c00;
+}
+
+
+#signInBtn{
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: transparent;
+    border-radius: 30px;
+}
+
+h1 {
+	text-align: center;
+	color: #ff1e00;
+	text-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5); 
+}
+
+#logout{
+        float: right;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 5px;
+        margin-right: 10px;
+        border:2px solid rgba(250, 37, 0, 0.932);
+        text-decoration: none;
+    }
+    
+#logout:hover{
+        border: 2px solid rgba(250, 37, 0, 0.932);
+        box-shadow: 
+            0 0 10px #ff3c00,
+            0 0 20px #ff3c00,
+            0 0 40px #ff3c00,
+            0 0 80px #ff3c00,
+            0 0 160px #ff3c00;
+}
+
